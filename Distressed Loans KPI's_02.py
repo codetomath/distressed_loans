@@ -29,8 +29,8 @@ color_palette_heatmap_pale_2 =  ['#FB9083', '#90FB83']
 
 
 
-df = pd.read_excel (r'C:/Users/orhan.altan/.spyder-py3/Distressed Loans/assets/Roll Rates.xlsx', sheet_name='Loans Breakdown')
-coordinates = pd.read_excel (r'C:/Users/orhan.altan/.spyder-py3/Distressed Loans/assets/Roll Rates.xlsx', sheet_name='Enlem-Boylam')
+df = pd.read_csv('https://raw.githubusercontent.com/codetomath/distressed_loans/master/Loans%20Breakdown.csv', sep = ';',encoding='ISO-8859-9')
+coordinates = pd.read_csv('https://raw.githubusercontent.com/codetomath/distressed_loans/master/Enlem-Boylam.csv', sep = ';', encoding='ISO-8859-9')
 
 
 coordinates = df.merge(coordinates,on='Şehir',how='left')
